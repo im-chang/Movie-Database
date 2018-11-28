@@ -1,13 +1,8 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import React, { Component } from 'react';
+import { Platform, StyleSheet, Text, View } from 'react-native';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
+import Listings from './screens/Listings/Listings';
+import MovieItem from './screens/MovieItem/MovieItem';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -16,18 +11,16 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-type Props = {};
-export default class App extends Component<Props> {
+class App extends React.Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
-    );
+    return <AppStackNavigator />;
   }
 }
+
+const AppNavigator = createStackNavigator({
+  Listings: Listings,
+  MovieItem: MovieItem,
+});
 
 const styles = StyleSheet.create({
   container: {
@@ -47,3 +40,5 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+
+export default createAppContainer(AppNavigator);
