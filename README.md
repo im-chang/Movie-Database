@@ -8,7 +8,7 @@ By:
 
 ## Screenshots
 
-![themoviedb](https://user-images.githubusercontent.com/38142960/49198734-7cfe4180-f349-11e8-9cf3-52719579c773.jpg)
+![themoviedbscreen](https://user-images.githubusercontent.com/38142960/49213989-79cf7980-f37a-11e8-9822-8c989759302f.jpg)
 
 ## Technologies Used
 
