@@ -13,7 +13,7 @@ import { fonts, colors } from '../../config/styles';
 
 class Listings extends Component {
   static navigationOptions = {
-    title: 'Listings',
+    title: 'Pop Movies',
     headerStyle: {
       backgroundColor: colors.grey,
     },
