@@ -31,4 +31,10 @@ Due to vulnerabilities, my API key has been hidden and instead is viewed as api_
 
 #### To Run
 
+For IOS:
+
+`react-native run-ios`
+
+For Android:
+
 `react-native run-ios`
