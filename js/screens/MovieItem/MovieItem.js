@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   View,
   Image,
+  ScrollView,
 } from 'react-native';
 import styles from './styles';
 import { withNavigation } from 'react-navigation';
@@ -27,7 +28,7 @@ class MovieItem extends Component {
     const { params } = this.props.navigation.state;
     const movie = params.item;
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Text style={styles.title}>{`${movie.title}`}</Text>
         <View style={styles.movieInfo}>
           <View style={styles.infMovie}>
@@ -51,7 +52,7 @@ class MovieItem extends Component {
             <Text style={styles.overviewText}>{`${movie.overview}`}</Text>
           </View>
         </View>
-      </View>
+      </ScrollView>
     );
   }
 }

@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
 
   movieInfo: {
     margin: width / 20,
+    flexGrow: 1,
   },
 
   infMovie: {
@@ -47,14 +48,14 @@ const styles = StyleSheet.create({
   },
   release: {
     padding: 5,
-    color: 'grey',
+    color: colors.lightGrey,
     fontSize: 20,
     fontFamily: fonts.main,
   },
   rating: {
     margin: 5,
     padding: 5,
-    fontSize: 20,
+    fontSize: 18,
     fontFamily: fonts.main,
   },
   favorite: {
@@ -69,7 +70,7 @@ const styles = StyleSheet.create({
   favoriteText: {
     color: colors.lightGrey,
     textAlign: 'center',
-    fontSize: 14,
+    fontSize: 10,
     fontFamily: fonts.main,
     textTransform: 'uppercase',
   },
