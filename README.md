@@ -6,6 +6,10 @@ By:
 
 - [Mike Chang](https://github.com/im-chang)
 
+## Screenshots
+
+![themoviedb](https://user-images.githubusercontent.com/38142960/49198734-7cfe4180-f349-11e8-9cf3-52719579c773.jpg)
+
 ## Technologies Used
 
 - [React Native](https://facebook.github.io/react-native/) Frontend
@@ -27,5 +31,3 @@ Due to security reasons, my API key has been hidden and instead is viewed as api
 #### To Run
 
 `react-native run-ios`
-
-## Screenshots
