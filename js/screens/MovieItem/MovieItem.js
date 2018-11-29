@@ -9,16 +9,17 @@ import {
 } from 'react-native';
 import styles from './styles';
 import { withNavigation } from 'react-navigation';
+import { colors } from '../../config/styles';
 
 class MovieItem extends Component {
   static navigationOptions = {
     title: 'Movie Details',
     headerStyle: {
-      backgroundColor: '#212121',
+      backgroundColor: colors.grey,
     },
     headerTitleStyle: {
       fontWeight: 'bold',
-      color: '#fff',
+      color: colors.white,
     },
   };
 
@@ -37,15 +38,18 @@ class MovieItem extends Component {
               }}
             />
             <View style={styles.movieText}>
-              <Text style={styles.release}>
-                Release Date: {`${movie.release_date}`}
-              </Text>
+              <Text style={styles.release}>{`${movie.release_date}`}</Text>
               <Text style={styles.rating}>
-                Rating: {`${movie.vote_average}`} ⭐️
+                ⭐️ {`${movie.vote_average}`}/10
               </Text>
+              <TouchableOpacity style={styles.favorite}>
+                <Text style={styles.favoriteText}> Mark As Favorite</Text>
+              </TouchableOpacity>
             </View>
           </View>
-          <Text style={styles.overview}>{`${movie.overview}`}</Text>
+          <View style={styles.overview}>
+            <Text style={styles.overviewText}>{`${movie.overview}`}</Text>
+          </View>
         </View>
       </View>
     );

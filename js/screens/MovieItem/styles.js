@@ -1,13 +1,19 @@
 import { StyleSheet, Dimensions } from 'react-native';
+import { fonts, colors } from '../../config/styles';
 
 const { height, width } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   title: {
     padding: height / 35,
-    backgroundColor: 'teal',
-    color: 'white',
-    fontSize: 20,
+    backgroundColor: colors.teal,
+    color: colors.white,
+    fontSize: 25,
+    fontFamily: fonts.main,
+    shadowColor: colors.grey,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
   },
   image: {
     width: width / 2.5,
@@ -24,20 +30,48 @@ const styles = StyleSheet.create({
   },
 
   overview: {
-    padding: width / 25,
+    paddingTop: width / 20,
+    paddingBottom: width / 20,
+    borderBottomWidth: 1,
+    borderColor: colors.lightGrey,
   },
-
+  overviewText: {
+    fontFamily: fonts.main,
+    color: colors.lightGrey,
+  },
   movieText: {
     padding: width / 20,
     display: 'flex',
     flex: 1,
+    fontFamily: fonts.main,
   },
   release: {
-    padding: height / 25,
+    padding: 5,
     color: 'grey',
+    fontSize: 20,
+    fontFamily: fonts.main,
   },
   rating: {
-    padding: height / 25,
+    margin: 5,
+    padding: 5,
+    fontSize: 20,
+    fontFamily: fonts.main,
+  },
+  favorite: {
+    margin: 10,
+    padding: 10,
+    width: width / 3.5,
+    borderWidth: 1,
+    borderColor: colors.lightGrey,
+    backgroundColor: colors.lightTeal,
+  },
+
+  favoriteText: {
+    color: colors.lightGrey,
+    textAlign: 'center',
+    fontSize: 14,
+    fontFamily: fonts.main,
+    textTransform: 'uppercase',
   },
 });
 
